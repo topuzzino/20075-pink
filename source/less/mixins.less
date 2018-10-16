@@ -1,0 +1,24 @@
+.clean { // нужно ли это правило делать невыводимым и ставить скобки?
+  padding: 0;
+  margin: 0;
+}
+
+.clean-list {
+  .clean;
+  list-style: none;
+}
+
+.visually-hidden {
+  .clean;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+}
+
+.link {
+  text-decoration: none;
+}

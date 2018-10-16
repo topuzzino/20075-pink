@@ -1,0 +1,64 @@
+.tariff {
+  background-color: @bg-grey;
+  padding-top: 64px;
+  padding-bottom: 46px;
+
+  .tariff__list {
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .slider__toggles {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slider__list {
+  .clean-list;
+}
+
+.tariff__table {
+  border-collapse: collapse;
+  border: 2px solid @input-outline;
+
+  .tariff__title {
+    background-color: @main-blue;
+    color: @white;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+
+    .tariff__price {
+      font-size: 24px;
+      font-weight: lighter;
+    }
+  }
+
+  tr {
+    background-color: @white;
+
+    .tariff__feature {
+      color: @main-blue;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: normal;
+    }
+  }
+}
+
+.tariff__content--included {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 21px;
+}
+
+.tariff__content--not-included {
+  background-image: url("../img/icon-no.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 26px;
+}

@@ -1,0 +1,118 @@
+.photos {
+  padding-top: 54px;
+  text-align: center;
+
+  .photos__intro-text {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @main-blue;
+
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 56px;
+  }
+}
+
+.photo-gallery {
+  .clean-list;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.photo-card {
+  width: 280px;
+  margin: 0 auto;
+  .link;
+  margin-bottom: 20px;
+}
+
+.photo-card--main {
+  width: 320px;
+  position: relative;
+}
+
+.photo-card__image {
+  display: block;
+}
+
+.photo-card__image--main {
+  width: 320px;
+}
+
+.photo-card__labelled {
+  background-color: @pink;
+  color: @white;
+
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+
+  padding: 6px 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.photo-card__info {
+  background-color: @bg-grey;
+  width: 246px;
+  margin: 0 auto;
+  padding: 24px 17px 24px 17px;
+  text-align: left;
+}
+
+.photo-card__title {
+  line-height: 24px;
+  color: @main-blue;
+
+  margin-bottom: 6px;
+
+  .photo-card__author {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .photo-card__time {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.photo-card__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.photo-card__likes {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  color: @pink;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button--like {
+  width: 13px;
+  height: 12px;
+  background: url("../img/icon-heart.svg") no-repeat;
+  border: none;
+}
+
+.photo-card__slogan {
+  padding: 48px 20px;
+
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    .clean;
+  }
+}

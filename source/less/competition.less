@@ -1,0 +1,168 @@
+.competition {
+  text-align: center;
+
+  .competition__intro-text {
+    .clean;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    color: @main-blue;
+
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 25px;
+  }
+}
+
+fieldset {
+  border: none;
+  .clean;
+}
+
+// First and third fieldset
+.competition__personal-data {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  .competition__list {
+    .clean-list;
+  }
+}
+
+.competition__item {
+  text-align: left;
+}
+
+.competition__item:last-child {
+  .competition__field {
+    margin-bottom: 46px;
+  }
+}
+
+.competition__item--answers {
+  margin-bottom: 30px;
+}
+
+.competition__text-label {
+  color: @pink;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+
+  display: block;
+  padding-left: 22px;
+  margin-bottom: 11px;
+}
+
+.competition__field {
+  border: 2px solid @input-outline;
+  width: 232px;
+  padding: 22px;
+  margin-bottom: 26px;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+// Second and fourth fieldset
+.competition__answers {
+  background-color: @bg-grey;
+  text-align: center;
+
+  // padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  .competition__list {
+    .clean-list;
+    padding-top: 90px;
+  }
+}
+
+.competition__title {
+  .clean;
+  color: @pink;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  width: 250px;
+  margin: 0 auto;
+  // padding-top: 50px;
+
+  display: block;
+  margin-bottom: -100px;
+}
+
+.competition__checkbox-label,
+.competition__radio-label {
+  color: @main-blue;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  padding-left: 20px;
+}
+
+.competition__checkbox-label::before {
+  content: "";
+  position: absolute;
+}
+
+// Last fieldset
+.competition__text {
+  padding-top: 80px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+
+  .competition__title {
+    margin-bottom: -100px;
+  }
+
+  textarea {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @main-blue;
+
+    padding: 20px;
+    width: 236px;
+    height: 156px;
+    border: 2px solid @input-outline;
+    margin-bottom: 48px;
+  }
+}
+
+.competition__button {
+  background-color: @submit-button;
+  color: @white;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: none;
+  width: 280px;
+  padding: 24px;
+
+  margin-bottom: 44px;
+}
+
+.competition__legend {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 60px;
+  display: block;
+
+  span {
+    color: @pink;
+  }
+}
