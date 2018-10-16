@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Фотографии с Pink</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo.svg" width="75" height="22" alt="Логотип Пинк">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item site-list__item--active"><a>Фотографии</a></li>
+          <li class="site-list__item"><a href="competition.html">Конкурс</a></li>
+          <li class="site-list__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Фотографии пользователей</h1>
+      <section class="photos">
+        <h2 class="visually-hidden">Фотографии участников конкурса</h2>
+        <p class="photos__intro-text">Взгляните на фотографии, которые выкладывают пользователи!
+Видите, как не хватает ваших?</p>
+
+        <!-- Я смутно предполагаю, что в фотографиях тоже надо миксовать классы,
+          но не понимаю, как правильно -->
+        <figure class="photos__photo-card photo-card photo-card--main">
+          <img class="photo-card__image photo-card__image--main" src="img/photo01.jpg" width="320" height="137" alt="Photo of some view">
+          <span class="photo-card__labelled">Панорама дня</span>
+          <figcaption class="photo-card__info">
+            <header class="photo-card__title">
+              <span class="photo-card__author">Анна </span>
+              <span class="photo-card__time">(5 минут назад)</span>
+            </header>
+            <p class="photo-card__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="photo-card__likes">
+              <button class="button like-button" type="button"></button>
+              Нравится: 215
+            </p>
+          </figcaption>
+        </figure>
+
+        <!-- Я тут запуталась, какие классы надо миксовать и где их миксовать и надо ли тут ul-список вообще -->
+        <ul class="photo-gallery">
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo02.jpg" width="280" height="180" alt="Photo of a unknown object">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Левон </span>
+                  <span class="photo-card__time">(5 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 356
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo03.jpg" width="280" height="180" alt="Photo of drum">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Антон </span>
+                  <span class="photo-card__time">(12 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Соседи будут рады!</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 666
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo04.jpg" width="280" height="180" alt="Photo of glass wall">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Борис </span>
+                  <span class="photo-card__time">(20 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 215
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo05.jpg" width="280" height="180" alt="Photo of Kubanckaya bakcha">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Сергей </span>
+                  <span class="photo-card__time">(25 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Самая кубанская в мире!</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 4
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo06.jpg" width="280" height="180" alt="Photo of two legs in the landscape">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Максим </span>
+                  <span class="photo-card__time">(40 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Где снег-то?</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 150
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="photo-card">
+            <figure class="photo-card">
+              <img class="photo-card__image" src="img/photo07.jpg" width="280" height="180" alt="Photo of a view from the airplane window">
+              <figcaption class="photo-card__info">
+                <header class="photo-card__title">
+                  <span class="photo-card__author">Надежда </span>
+                  <span class="photo-card__time">(45 часов назад)</span>
+                </header>
+                <p class="photo-card__text">Всем GM и взаимные лайки!</p>
+                <p class="photo-card__likes">
+                  <button class="button like-button" type="button"></button>
+                  Нравится: 2560
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <div class="photo-card__slogan">
+          <p>Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </section>
+
+      <section class="upload">
+        <h2 class="visually-hidden">Выложи свое фото</h2>
+        <div class="upload__wrapper">
+          <img class="upload__image" src="img/photo08.jpg" width="280" height="274" alt="Photo of winter landscape">
+          <ul class="upload__list">
+            <li class="upload__item upload__item--crop">
+              <button class="button crop-button" type="button"></button>
+            </li>
+            <li class="upload__item upload__item--color">
+              <button class="button color-button" type="button"></button>
+            </li>
+            <li class="upload__item upload__item--saturation">
+              <button class="button saturation-button" type="button"></button>
+            </li>
+          </ul>
+          <div class="upload__control">
+            <div class="upload__scale">
+              <div class="upload__bar"></div>
+            </div>
+            <div class="upload__toggle"></div>
+          </div>
+          <!-- Не знаю, как правильно эти кнопки делать:
+          с одной стороны, это кнопки формы, они же должны на сервер отправлять фотку, а если это форма, то надо и весь код в этой секции делать внутри формы? -->
+          <button class="button upload-button" type="submit">Запостить</button>
+          <button class="button cancel-button" type="button" disabled>Отмена</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/inner-logotype.svg" width="148" height="40" alt="Логотип Пинк с символом очков">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Твиттер</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Фейстук</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#">Ютьюб</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-academy.svg" alt="Лого HTML Academy"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
