@@ -1,0 +1,99 @@
+.upload {
+  background-color: @bg-grey;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  .upload__wrapper {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.upload__image {
+  width: 280px;
+  height: 374px;
+
+  display: block;
+  margin-bottom: 42px;
+}
+
+.upload__list {
+  .clean-list;
+  width: 198px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload__item {
+  width: 44px;
+  height: 44px;
+}
+
+.button--crop {
+  background: url("../img/icon-editor-crop.svg") no-repeat;
+  border: none;
+  width: 44px;
+  height: 44px;
+}
+
+.button--color {
+  background: url("../img/icon-editor-fill.svg") no-repeat;
+  border: none;
+  width: 48px;
+  height: 43px;
+}
+
+.button--saturation {
+  background: url("../img/icon-editor-contrast.svg") no-repeat;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+.upload__control {
+  margin-bottom: 28px;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.upload__bar {
+  width: 240px;
+  height: 2px;
+  background-color: @main-blue;
+  margin: 0 auto;
+}
+
+.upload__toggle {
+  /* Здесь будет тоггл закоден */
+}
+
+.button--upload,
+.button--cancel {
+  .clean;
+  color: @pink;
+  text-align: center;
+  background-color: transparent;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+
+  border: 3px solid @pink;
+  border-radius: 30px;
+
+  display: block;
+  padding: 15px 35px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.button--upload {
+  margin-bottom: 12px;
+}
+
+.button--cancel:disabled {
+  color: #dddfe0;
+  border: 3px solid #dddfe0;
+}
