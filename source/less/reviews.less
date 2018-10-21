@@ -2,39 +2,141 @@
   background-color: @white;
   padding-top: 50px;
   padding-bottom: 42px;
+}
 
-  .slider__list {
-    .clean-list;
+.reviews__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews__list {
+  .clean-list;
+  padding-bottom: 38px;
+}
+
+.reviews__item {
+  text-align: center;
+  display: none;
+}
+
+.reviews__author {
+  color: @black;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  font-style: normal;
+
+  margin-bottom: 22px;
+}
+
+.reviews__text {
+  color: @main-blue;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+
+  width: 280px;
+  margin: 0 auto;
+}
+
+.slider__toggles {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 108px;
+}
+
+/* белая подложка под переключатели */
+.slider__toggle {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  font-size: 0;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: @white;
+  margin-right: 13px;
+}
+
+.slider__toggle:last-child {
+  margin-right: 0;
+}
+
+/* сами переключатели - серой точкой */
+.slider__toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: @bullets-reviews;
+}
+
+/* стили инпутам, чтобы слайды переключались при нажатии */
+#review-1:checked ~ .reviews__list .reviews__item:nth-child(1) {
+  display: block;
+}
+
+#review-2:checked ~ .reviews__list .reviews__item:nth-child(2) {
+  display: block;
+}
+
+#review-3:checked ~ .reviews__list .reviews__item:nth-child(3) {
+  display: block;
+}
+
+#review-1:checked ~ .slider__toggles .slider__toggle--1,
+#review-2:checked ~ .slider__toggles .slider__toggle--2,
+#review-3:checked ~ .slider__toggles .slider__toggle--3 {
+  background-color: @main-blue;
+}
+
+#review-1:checked ~ .slider__toggles .slider__toggle--1::after,
+#review-2:checked ~ .slider__toggles .slider__toggle--2::after,
+#review-3:checked ~ .slider__toggles .slider__toggle--3::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    width: 620px;
   }
 
-  .reviews__item {
-    text-align: center;
-
-    .reviews__author {
-      color: @black;
-      font-size: 18px;
-      line-height: 30px;
-      font-weight: bold;
-      font-style: normal;
-
-      margin-bottom: 22px;
-    }
-
-    .reviews__text {
-      color: @main-blue;
-      font-size: 14px;
-      line-height: 30px;
-      font-weight: normal;
-
-      width: 280px;
-      margin: 0 auto;
-      margin-bottom: 38px;
-    }
+  .reviews__author {
+    width: 320px;
   }
 
-  .slider__toggles {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+  .reviews__text {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__wrapper {
+    width: 940px;
+  }
+
+  .reviews__text {
+    width: 712px;
   }
 }

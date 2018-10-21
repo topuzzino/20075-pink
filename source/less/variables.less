@@ -1,7 +1,8 @@
-/* -------- Device sizes -------- */
-@tablet-width: 768px;
+/* -------- Viewports -------- */
+@tablet-width: 660px;
 @desktop-width: 1200px;
 
+@tablet-width-only: 1199px;
 
 /* -------- Colors -------- */
 
@@ -37,11 +38,22 @@
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/opensans.woff"),
-    url("../fonts/opensans.woff2"),
-    url("../fonts/opensansbold.woff"),
-    url("../fonts/opensansbold.woff2"),
-    url("../fonts/opensanslight.woff"),
+    url("../fonts/opensans.woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensansbold.woff"),
+    url("../fonts/opensansbold.woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensanslight.woff"),
     url("../fonts/opensanslight.woff2");
+  font-weight: 300;
 }
 
 @font: opensans, "Arial", sans-serif;

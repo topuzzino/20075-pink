@@ -1,3 +1,7 @@
+.page-footer--index {
+  display: none;
+}
+
 .page-footer__wrapper {
   width: 180px;
   margin: 0 auto;
@@ -46,4 +50,40 @@
 
 .social__link--youtube {
   background: url("../img/icon-youtube.svg") no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    width: 620px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    width: 130px;
+    display: flex;
+  }
+
+  .social__list {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 940px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
