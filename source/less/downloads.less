@@ -1,12 +1,20 @@
 .downloads {
   background-color: @downloads-bg;
   color: @white;
+  overflow: hidden;
 
   .downloads__intro-image {
-    background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
-    width: 320px;
+    background-image: url("../img/iphone-hand-mobile@1x.png"),
+      url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
     height: 462px;
+    background-position: left bottom, center;
     background-color: @main-blue;
+  }
+
+  .downloads__intro-text {
+    display: none;
   }
 
   .downloads__button {
@@ -51,4 +59,57 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .downloads {
+    min-height: 730px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    //position: relative;
+
+    .downloads__intro-image {
+      background-image: url("../img/iphone-hand-mobile@1x.png"),
+        url("../img/bg-back-mobile@1x.jpg");
+      width: 660px;
+      height: 730px;
+      background-position: right bottom, center;
+      background-size: 658px 545px, cover;
+    }
+
+    .downloads__intro-text {
+      display: block;
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 300;
+      text-align: center;
+      width: 220px;
+      margin: 0 auto;
+    }
+  }
+
+  .downloads__wrapper {
+    width: 300px;
+    height: 415px; // может быть здесь надо min-height?
+    background-color: transparent;
+    z-index: 10;
+  }
+
+  .downloads__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 415px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .downloads {
+    .downloads__intro-image {
+      width: 1200px;
+      height: 853px;
+    }
+  }
 }

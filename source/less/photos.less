@@ -1,17 +1,17 @@
 .photos {
   padding-top: 54px;
   text-align: center;
+}
 
-  .photos__intro-text {
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: normal;
-    color: @main-blue;
+.photos__intro-text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @main-blue;
 
-    width: 250px;
-    margin: 0 auto;
-    margin-bottom: 56px;
-  }
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 56px;
 }
 
 .photo-gallery {
@@ -20,13 +20,15 @@
   padding-left: 20px;
 }
 
+// Стили для основных фото-карточек
 .photo-card {
-  width: 280px;
+  // width: 280px;
   margin: 0 auto;
   .link;
   margin-bottom: 20px;
 }
 
+// Стили для первой фото-карточки "панорама дня"
 .photo-card--main {
   width: 320px;
   position: relative;
@@ -47,6 +49,7 @@
   font-size: 12px;
   line-height: 24px;
   font-weight: bold;
+  text-transform: uppercase;
 
   padding: 6px 20px;
   position: absolute;
@@ -55,6 +58,14 @@
 }
 
 .photo-card__info {
+  background-color: @bg-grey;
+  width: 246px;
+  margin: 0 auto;
+  padding: 24px 17px 24px 17px;
+  text-align: left;
+}
+
+.photo-card__info--main {
   background-color: @bg-grey;
   width: 246px;
   margin: 0 auto;
@@ -114,5 +125,126 @@
     line-height: 30px;
     font-weight: normal;
     .clean;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photos {
+    padding-top: 100px;
+  }
+
+  .photos__intro-text {
+    width: 480px;
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+
+  .photo-card {
+    width: 300px;
+    margin-bottom: 20px; //остается таким же, как на мобильном
+  }
+
+  .photo-card--main {
+    width: 660px;
+    // height: 630px;
+    margin-bottom: 50px;
+  }
+
+  .photo-card__image--main {
+    width: 660px;
+    height: 510px;
+    display: block; // иначе между картинкой и текстовым блоком возникает зазор
+  }
+
+  .photo-card__labelled {
+    padding: 12px 20px;
+    right: 20px;
+    top: 56px;
+  }
+
+  .photo-card__info--main {
+    display: block;
+    width: 566px;
+    padding: 30px 27px;
+  }
+
+  .photo-gallery {
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .photo-gallery__item {
+    width: 300px;
+  }
+
+  .photo-gallery__item:last-child,
+  .photo-gallery__item:nth-child(5) {
+    .photo-card {
+      margin-bottom: 0;
+    }
+  }
+
+  .photo-card__image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo-card__info {
+    width: 246px;
+    height: 95px;
+    padding: 30px 27px;
+  }
+
+  .photo-card__slogan {
+    padding: 72px 100px;
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__intro-text {
+    width: 620px;
+  }
+
+  .photo-card--main {
+    width: 1200px;
+    margin-bottom: 50px;
+  }
+
+  .photo-card__image--main {
+    width: 1200px;
+    height: 510px;
+  }
+
+  .photo-card__labelled {
+    padding: 12px 20px;
+    right: 130px;
+    top: 54px;
+  }
+
+  .photo-card__info--main {
+    width: 886px;
+    padding: 30px 27px;
+  }
+
+  .photo-gallery {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .photo-card__image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .photo-card__slogan {
+    padding: 65px 250px;
   }
 }

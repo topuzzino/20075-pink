@@ -1,22 +1,28 @@
 .competition {
   text-align: center;
-
-  .competition__intro-text {
-    .clean;
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 300;
-    color: @main-blue;
-
-    width: 280px;
-    margin: 0 auto;
-    padding-top: 25px;
-  }
 }
 
-fieldset {
+.competition__intro-text {
+  .clean;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  color: @main-blue;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+// Все филдсеты
+.competition__block {
   border: none;
   .clean;
+}
+
+// все списки
+.competition__list {
+  .clean-list;
 }
 
 // First and third fieldset
@@ -24,12 +30,44 @@ fieldset {
   width: 280px;
   margin: 0 auto;
   padding-top: 40px;
+}
+
+// Second and fourth fieldset
+.competition__answers {
+  background-color: @bg-grey;
+  text-align: center;
+
+  padding-right: 20px;
+  padding-left: 20px;
 
   .competition__list {
-    .clean-list;
+    padding-top: 90px;
   }
 }
 
+// все легенды
+.competition__title {
+  .clean;
+  color: @pink;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  width: 250px;
+  margin: 0 auto;
+  // padding-top: 50px;
+
+  display: block;
+  margin-bottom: -100px;
+}
+
+// легенда третьего блока спрятана на мобильном
+.competition__title--invisible {
+  display: none;
+}
+
+// элементы списков <li>
 .competition__item {
   text-align: left;
 }
@@ -49,6 +87,7 @@ fieldset {
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
+  text-transform: uppercase;
 
   display: block;
   padding-left: 22px;
@@ -66,37 +105,6 @@ input[type="text"] {
   font-size: 18px;
   line-height: 30px;
   font-weight: normal;
-}
-
-// Second and fourth fieldset
-.competition__answers {
-  background-color: @bg-grey;
-  text-align: center;
-
-  // padding-top: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  .competition__list {
-    .clean-list;
-    padding-top: 90px;
-  }
-}
-
-.competition__title {
-  .clean;
-  color: @pink;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: normal;
-  text-transform: uppercase;
-
-  width: 250px;
-  margin: 0 auto;
-  // padding-top: 50px;
-
-  display: block;
-  margin-bottom: -100px;
 }
 
 .competition__checkbox-label,
@@ -146,6 +154,7 @@ input[type="text"] {
   font-weight: bold;
   text-transform: uppercase;
 
+  display: block;
   border: none;
   width: 280px;
   padding: 24px;
@@ -164,5 +173,295 @@ input[type="text"] {
 
   span {
     color: @pink;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .competition__intro-text {
+    font-size: 18px;
+    font-weight: normal;
+
+    width: 510px;
+    margin: 0 auto;
+    padding-top: 95px;
+    padding-bottom: 72px;
+  }
+
+  .competition__block {
+    background-color: transparent;
+    border: 2px solid @input-outline;
+    padding: 0;
+    margin-bottom: 65px;
+  }
+
+  // содержимое формы в новом порядке расположения
+  .competition__form {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .competition__personal-data {
+      order: 1;
+      border: none;
+      width: 620px;
+    }
+
+    .competition__answers--achievs {
+      order: 4;
+    }
+
+    .competition__personal-data--contacts {
+      order: 3;
+      border: 2px solid @input-outline;
+    }
+
+    .competition__answers--apps {
+      order: 2;
+    }
+
+    .competition__text {
+      order: 5;
+    }
+
+    .competition__button--wrapper {
+      order: 6;
+    }
+  }
+
+  .competition__item {
+    //margin-bottom: 42px;
+    padding-left: 60px;
+  }
+
+  .competition__item--answers {
+    padding-left: 120px;
+    margin-bottom: 54px;
+  }
+
+  // all <li> in first fieldset
+  .competition__item--personal {
+    padding-left: 0;
+    margin-bottom: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .competition__text-label {
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: normal;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    .competition__field {
+      //width: 476px;
+      padding: 15px 20px;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  }
+
+  .competition__item--personal:last-child {
+    margin-bottom: 0;
+  }
+
+  .competition__item:last-child {
+    .competition__field {
+      margin-bottom: 0;
+    }
+  }
+
+
+  // Second and fourth fieldset
+  .competition__answers {
+    .competition__list {
+      padding-top: 46px;
+    }
+  }
+
+  // Все легенды
+  .competition__title {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 436px;
+    margin: 0 auto;
+  }
+
+  // появляющаяся легенда "Контактная информация""
+  .competition__title--invisible {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    margin-left: 180px; // костыль, чтобы
+  }
+
+  .competition__personal-data--contacts {
+    .competition__list {
+      padding-top: 46px;
+    }
+  }
+
+  .competition__item--contacts {
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+    //width: 618px;
+
+    .competition__text-label {
+      order: 2;
+      margin-bottom: 40px;
+    }
+
+    .competition__field {
+      box-sizing: border-box;
+      width: 500px;
+      margin-bottom: 20px;
+    }
+  }
+
+  // Last fieldset
+  .competition__text {
+    padding-top: 40px;
+    text-align: center;
+
+    .competition__title {
+      .clean;
+      width: 200px;
+      margin-left: 182px;
+    }
+
+    textarea {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: normal;
+      color: @main-blue;
+
+      box-sizing: border-box;
+      width: 504px;
+      height: 195px;
+      margin-bottom: 52px;
+    }
+  }
+
+  .competition__button--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .competition__button {
+    width: 300px;
+    padding-top: 15px 20px;
+    margin-bottom: 0;
+  }
+
+  .competition__legend {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competition__intro-text {
+    width: 820px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  .competition__form {
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 0;
+
+    .competition__personal-data {
+      width: 435px;
+      margin-left: 0;
+    }
+
+    .competition__answers--achievs {
+      width: 940px;
+    }
+
+    .competition__personal-data--contacts {
+      width: 940px;
+    }
+
+    .competition__answers--apps {
+      width: 435px;
+    }
+
+    .competition__text {
+      width: 940px;
+    }
+
+    .competition__button--wrapper {
+      order: 6;
+    }
+  }
+
+  .competition__list {
+    width: 435px;
+  }
+
+  .competition__item--personal {
+    width: 435px;
+  }
+
+  .competition__personal-data--contacts {
+    .competition__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 820px;
+      margin: 0 auto;
+    }
+  }
+
+  .competition__item--contacts {
+    width: 376px;
+    padding-left: 0;
+
+    .competition__field {
+      width: 376px;
+    }
+  }
+
+  .competition__list--achievs {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .competition__item--answers {
+      width: 260px;
+      padding-left: 50px;
+    }
+  }
+
+  .competition__text {
+    textarea {
+      padding: 20px;
+      width: 820px;
+      height: 130px;
+      margin-bottom: 48px;
+    }
+  }
+
+  .competition__button--wrapper {
+    width: 940px;
   }
 }

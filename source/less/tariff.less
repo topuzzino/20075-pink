@@ -1,28 +1,43 @@
 .tariff {
   background-color: @bg-grey;
-  padding-top: 64px;
+  padding-top: 90px;
   padding-bottom: 46px;
-
-  .tariff__list {
-    width: 280px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-  }
-
-  .slider__toggles {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
+  position: relative;
 }
 
-.slider__list {
+.tariff::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tariff__wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.tariff__list {
   .clean-list;
+  width: 840px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.tariff__item {
+  width: 280px;
 }
 
 .tariff__table {
   border-collapse: collapse;
   border: 2px solid @input-outline;
+  width: 280px;
 
   .tariff__title {
     background-color: @main-blue;
@@ -30,23 +45,71 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
+    text-align: center;
+
+    padding-top: 23px;
+    padding-bottom: 19px;
+    //border-top: none;
 
     .tariff__price {
       font-size: 24px;
       font-weight: lighter;
+      display: block;
     }
   }
 
   tr {
     background-color: @white;
+    border-bottom: 2px solid @input-outline;
 
     .tariff__feature {
       color: @main-blue;
       font-size: 14px;
       line-height: 30px;
       font-weight: normal;
+      text-transform: uppercase;
+
+      padding-left: 20px;
+      padding-top: 24px;
+      padding-bottom: 20px;
+
+      width: 210px;
+    }
+
+    .tariff__content {
+      width: 50px;
+      vertical-align: middle;
     }
   }
+}
+
+.tariff__hit {
+  position: relative;
+}
+
+.tariff__hit::before {
+  position: absolute;
+  content: "";
+
+  width: 74px;
+  height: 73px;
+  background: url("../img/bg-hit.svg") no-repeat;
+
+  left: 0;
+  top: 0;
+}
+
+.tariff__hit::after {
+  position: absolute;
+  content: "ХИТ";
+  font-size: 14px;
+  line-height: 30px;
+
+  width: 74px;
+  height: 73px;
+  left: 2px;
+  top: 6px;
+  transform: rotate(-45deg);
 }
 
 .tariff__content--included {
@@ -61,4 +124,91 @@
   background-repeat: no-repeat;
   width: 27px;
   height: 26px;
+}
+
+.tariff__toggles {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 108px;
+}
+
+/* белая подложка под переключатели */
+.tariff__toggle {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  font-size: 0;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: @white;
+  margin-right: 13px;
+}
+
+.tariff__toggle:last-child {
+  margin-right: 0;
+}
+
+/* сами переключатели - серой точкой */
+.tariff__toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: @bullets-reviews;
+}
+
+@media (min-width: @tablet-width) {
+  .tariff {
+    padding-top: 90px;
+  }
+
+  .tariff::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-size: cover;
+  }
+
+  .tariff__wrapper {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .tariff__list {
+    display: flex;
+    width: 620px;
+  }
+
+  .tariff__item {
+    width: 155px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff__wrapper {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .tariff__list {
+    width: 940px;
+  }
+
+  .tariff__item {
+    width: 234px;
+  }
 }
