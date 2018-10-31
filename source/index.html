@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  -->
     <title>Pink</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -36,7 +38,7 @@
         <div class="downloads__intro-image"></div>
         <div class="downloads__wrapper">
           <p class="downloads__intro-text">Взгляните на жизнь иначе!</p>
-          <a class="button downloads__button" href="#" type="button">Скачать приложение</a>
+          <a class="button downloads__button" href="#">Скачать приложение</a>
           <section class="downloads__icons">
             <h2 class="visually-hidden">Приложение для всех систем</h2>
             <div class="downloads__icon--wrapper">
@@ -89,9 +91,9 @@
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы о нас</h2>
-          <input class="visually-hidden" type="radio" id="review-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="review-2" name="toggle">
-          <input class="visually-hidden" type="radio" id="review-3" name="toggle">
+          <input class="visually-hidden review__btn-1" type="radio" id="review-1" name="toggle" checked>
+          <input class="visually-hidden review__btn-2" type="radio" id="review-2" name="toggle">
+          <input class="visually-hidden review__btn-3" type="radio" id="review-3" name="toggle">
           <div class="slider__toggles">
             <label class="slider__toggle slider__toggle--1" type="button" for="review-1"><span class="visually-hidden">1</span></label>
             <label class="slider__toggle slider__toggle--2" type="button" for="review-2"><span class="visually-hidden">2</span></label>
@@ -103,43 +105,46 @@
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="reviews__item">
-              <cite class="reviews__author">Второй автор</cite>
-              <p class="reviews__text">Текст второго ревью</p>
+              <cite class="reviews__author">Петр Николаев</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="reviews__item">
-              <cite class="reviews__author">Третий автор</cite>
-              <p class="reviews__text">Текст третьего ревью</p>
+              <cite class="reviews__author">Николаус Петерсон</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
         </div>
       </section>
 
+
+      <!-- Old version -->
+
       <section class="tariff">
         <div class="tariff__wrapper">
           <h2 class="visually-hidden">Наши цены</h2>
-          <input class="visually-hidden" type="radio" name="toggle-1" id="tariff-1" checked>
-          <input class="visually-hidden" type="radio" name="toggle-1" id="tariff-2">
-          <input class="visually-hidden" type="radio" name="toggle-1" id="tariff-3">
+          <input class="visually-hidden tariff__btn-1" type="radio" name="toggle-1" id="tariff-1">
+          <input class="visually-hidden tariff__btn-2" type="radio" name="toggle-1" id="tariff-2" checked>
+          <input class="visually-hidden tariff__btn-3" type="radio" name="toggle-1" id="tariff-3">
           <div class="tariff__toggles">
-            <label class="tariff__toggle tariff__toggle--1" type="button" for="tariff-1"></label>
-            <label class="tariff__toggle tariff__toggle--2" type="button" for="tariff-2"></label>
-            <label class="tariff__toggle tariff__toggle--3" type="button" for="tariff-3"></label>
+            <label class="tariff__toggle" type="button" for="tariff-1"></label>
+            <label class="tariff__toggle" type="button" for="tariff-2"></label>
+            <label class="tariff__toggle" type="button" for="tariff-3"></label>
           </div>
-          <ul class="tariff__list slider__list">
-            <li class="tariff__item slider__item">
+          <ul class="tariff__list">
+            <li class="tariff__item">
               <table class="tariff__table">
                 <th colspan="2" class="tariff__title">База<span class="tariff__price">1,99 USD</span></th>
                 <tr>
                   <td class="tariff__feature">Розовый фильтр</td>
-                  <td class="tariff__content tariff__content--included"><span class="visually-hidden">Есть</span></td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Смайлики</td>
-                  <td class="tariff__content tariff__content--not-included"><span class="visually-hidden">Нет</span></td>
+                  <td class="tariff__content tariff__no"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Комментарии</td>
-                  <td class="tariff__content tariff__content--not-included"><span class="visually-hidden">Нет</span></td>
+                  <td class="tariff__content tariff__no"></td>
                 </tr>
               </table>
             </li>
@@ -148,15 +153,15 @@
                 <th colspan="2" class="tariff__title tariff__hit">Стандарт<span class="tariff__price">3,99 USD</span></th>
                 <tr>
                   <td class="tariff__feature">Розовый фильтр</td>
-                  <td class="tariff__content tariff__content--included">Есть</td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Смайлики</td>
-                  <td class="tariff__content tariff__content--included">Есть</td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Комментарии</td>
-                  <td class="tariff__content tariff__content--not-included">Нет</td>
+                  <td class="tariff__content tariff__no"></td>
                 </tr>
               </table>
             </li>
@@ -165,21 +170,69 @@
                 <th colspan="2" class="tariff__title">Анлим<span class="tariff__price">9,99 USD</span></th>
                 <tr>
                   <td class="tariff__feature">Розовый фильтр</td>
-                  <td class="tariff__content tariff__content--included">Есть</td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Смайлики</td>
-                  <td class="tariff__content tariff__content--included">Есть</td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
                 <tr>
                   <td class="tariff__feature">Комментарии</td>
-                  <td class="tariff__content tariff__content--included">Есть</td>
+                  <td class="tariff__content tariff__yes"></td>
                 </tr>
               </table>
             </li>
           </ul>
         </div>
       </section>
+
+
+      <!-- New version
+      <section class="tariff">
+        <div class="tariff__wrapper">
+          <h2 class="visually-hidden">Наши цены</h2>
+          <div class="tariff__visuel">
+            <input class="visually-hidden tariff__btn-1" type="radio" name="toggle-1" id="btn-1" checked>
+            <input class="visually-hidden tariff__btn-2" type="radio" name="toggle-1" id="btn-2">
+            <input class="visually-hidden tariff__btn-3" type="radio" name="toggle-1" id="btn-3">
+            <div class="tariff__toggles">
+              <label class="tariff__toggle" type="button" for="btn-1"></label>
+              <label class="tariff__toggle" type="button" for="btn-2"></label>
+              <label class="tariff__toggle" type="button" for="btn-3"></label>
+            </div>
+            <table class="tariff__list">
+              <tr>
+                <th class="visually-hidden"></th>
+                <th class="tariff__title">База<span class="tariff__price">1,99 USD</span></th>
+                <th class="tariff__title tariff__hit">Стандарт<span class="tariff__price">3,99 USD</span></th>
+                <th class="tariff__title">Анлим<span class="tariff__price">9,99 USD</span></th>
+              </tr>
+
+              <tr>
+                <td class="tariff__feature">Розовый фильтр</td>
+                <td class="tariff__feature tariff__yes">Розовый фильтр</td>
+                <td class="tariff__feature tariff__yes">Розовый фильтр</td>
+                <td class="tariff__feature tariff__yes">Розовый фильтр</td>
+              </tr>
+
+              <tr>
+                <td class="tariff__feature">Смайлики</td>
+                <td class="tariff__feature tariff__no">Смайлики</td>
+                <td class="tariff__feature tariff__yes">Смайлики</td>
+                <td class="tariff__feature tariff__yes">Смайлики</td>
+              </tr>
+
+              <tr>
+                <td class="tariff__feature">Комментарии</td>
+                <td class="tariff__feature tariff__no">Комментарии</td>
+                <td class="tariff__feature tariff__no">Комментарии</td>
+                <td class="tariff__feature tariff__yes">Комментарии</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    -->
     </main>
 
     <section class="contacts contacts--index">

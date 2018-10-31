@@ -3,21 +3,23 @@
   padding-top: 90px;
   padding-bottom: 46px;
   position: relative;
-}
 
-.tariff::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 26px;
-  background-image: url("../img/bg-triangle-white.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .tariff__wrapper {
+  width: 320px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
@@ -25,62 +27,90 @@
 .tariff__list {
   .clean-list;
   width: 840px;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
   display: flex;
   flex-wrap: nowrap;
 }
 
 .tariff__item {
-  width: 280px;
+  width: 275px;
+}
+
+.tariff__title {
+  background-color: @main-blue;
+  color: @white;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.tariff__price {
+  font-size: 24px;
+  font-weight: lighter;
+  display: block;
+}
+
+.tariff__feature {
+  color: @main-blue;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+
+  width: 210px;
 }
 
 .tariff__table {
   border-collapse: collapse;
-  border: 2px solid @input-outline;
+  //border: 2px solid @input-outline;
   width: 280px;
+}
 
-  .tariff__title {
-    background-color: @main-blue;
-    color: @white;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
+.tariff__table tbody {
+  border: 2px solid @input-outline;
+}
 
-    padding-top: 23px;
-    padding-bottom: 19px;
-    //border-top: none;
+.tariff__table tr {
+  background-color: #ffffff;
+  border: 2px solid @input-outline;
+  position: relative;
+}
 
-    .tariff__price {
-      font-size: 24px;
-      font-weight: lighter;
-      display: block;
-    }
-  }
+.tariff__feature,
+.tariff__content {
+  background-color: #ffffff;
+}
 
-  tr {
-    background-color: @white;
-    border-bottom: 2px solid @input-outline;
 
-    .tariff__feature {
-      color: @main-blue;
-      font-size: 14px;
-      line-height: 30px;
-      font-weight: normal;
-      text-transform: uppercase;
+.tariff__content {
+  width: 50px;
+  position: absolute;
+  content: "";
+  right: 17px;
+  top: 20px;
+}
 
-      padding-left: 20px;
-      padding-top: 24px;
-      padding-bottom: 20px;
+.tariff__yes {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 21px;
+}
 
-      width: 210px;
-    }
-
-    .tariff__content {
-      width: 50px;
-      vertical-align: middle;
-    }
-  }
+.tariff__no {
+  background-image: url("../img/icon-no.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 26px;
 }
 
 .tariff__hit {
@@ -112,28 +142,15 @@
   transform: rotate(-45deg);
 }
 
-.tariff__content--included {
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  width: 31px;
-  height: 21px;
-}
-
-.tariff__content--not-included {
-  background-image: url("../img/icon-no.svg");
-  background-repeat: no-repeat;
-  width: 27px;
-  height: 26px;
-}
-
 .tariff__toggles {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   position: absolute;
   bottom: 0;
-  left: 108px;
+  left: 40%;
+  width: 64px;
 }
 
 /* белая подложка под переключатели */
@@ -149,12 +166,12 @@
   border-radius: 50%;
   cursor: pointer;
 
-  background-color: @white;
-  margin-right: 13px;
+  background-color: transparent;
+  //margin-right: 13px;
 }
 
 .tariff__toggle:last-child {
-  margin-right: 0;
+  //margin-right: 0;
 }
 
 /* сами переключатели - серой точкой */
@@ -169,6 +186,35 @@
   border-radius: 50%;
   background-color: @bullets-reviews;
 }
+
+.tariff__btn-1:checked ~ .tariff__list {
+  transform: translate(0);
+}
+
+.tariff__btn-2:checked ~ .tariff__list {
+  transform: translateX(-257px);
+}
+
+.tariff__btn-3:checked ~ .tariff__list {
+  transform: translateX(-564px);
+}
+
+.tariff__btn-1:checked ~ .tariff__toggles label[for="tariff-1"],
+.tariff__btn-2:checked ~ .tariff__toggles label[for="tariff-2"],
+.tariff__btn-3:checked ~ .tariff__toggles label[for="tariff-3"] {
+  background-color: @main-blue;
+
+  &::after {
+    background-color: #ffffff;
+  }
+}
+
+/*
+.tariff__list ~ th:first-child {
+  display: none;
+}
+*/
+
 
 @media (min-width: @tablet-width) {
   .tariff {

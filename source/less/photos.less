@@ -1,5 +1,5 @@
 .photos {
-  padding-top: 54px;
+  padding-top: 45px;
   text-align: center;
 }
 
@@ -11,7 +11,7 @@
 
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
 }
 
 .photo-gallery {
@@ -22,16 +22,17 @@
 
 // Стили для основных фото-карточек
 .photo-card {
-  // width: 280px;
   margin: 0 auto;
   .link;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 // Стили для первой фото-карточки "панорама дня"
 .photo-card--main {
-  width: 320px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
+  margin-bottom: 22px;
 }
 
 .photo-card__image {
@@ -39,7 +40,8 @@
 }
 
 .photo-card__image--main {
-  width: 320px;
+  width: 100%;
+  display: block;
 }
 
 .photo-card__labelled {
@@ -61,7 +63,7 @@
   background-color: @bg-grey;
   width: 246px;
   margin: 0 auto;
-  padding: 24px 17px 24px 17px;
+  padding: 17px 17px 17px 17px;
   text-align: left;
 }
 
@@ -69,15 +71,13 @@
   background-color: @bg-grey;
   width: 246px;
   margin: 0 auto;
-  padding: 24px 17px 24px 17px;
+  padding: 15px 17px 20px 17px;
   text-align: left;
 }
 
 .photo-card__title {
   line-height: 24px;
   color: @main-blue;
-
-  margin-bottom: 6px;
 
   .photo-card__author {
     font-size: 14px;
@@ -87,7 +87,23 @@
   .photo-card__time {
     font-size: 12px;
     font-weight: 300;
+    text-transform: uppercase;
   }
+}
+
+.photo-gallery__item:nth-child(2) .photo-card__info {
+  padding-bottom: 20px;
+}
+
+.photo-gallery__item:nth-child(4) .photo-card,
+.photo-gallery__item:nth-child(5) .photo-card {
+  margin-bottom: 22px;
+}
+
+.photo-gallery__item:nth-child(4) .photo-card__info,
+.photo-gallery__item:nth-child(5) .photo-card__info,
+.photo-gallery__item:nth-child(6) .photo-card__info {
+  padding-bottom: 19px;
 }
 
 .photo-card__text {
@@ -96,7 +112,7 @@
   font-weight: normal;
 
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 
 .photo-card__likes {
@@ -105,9 +121,12 @@
   font-weight: normal;
   color: @pink;
   text-transform: uppercase;
+  width: 120px;
+  margin: 0;
 
-  margin-top: 0;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .button--like {
@@ -115,10 +134,14 @@
   height: 12px;
   background: url("../img/icon-heart.svg") no-repeat;
   border: none;
+
+  span {
+    margin-left: 10px;
+  }
 }
 
 .photo-card__slogan {
-  padding: 48px 20px;
+  padding: 23px 20px 42px;
 
   p {
     font-size: 14px;
@@ -145,13 +168,13 @@
   }
 
   .photo-card--main {
-    width: 660px;
-    // height: 630px;
+    width: 100%;
+    //height: 508px;
     margin-bottom: 50px;
   }
 
   .photo-card__image--main {
-    width: 660px;
+    width: 100%;
     height: 510px;
     display: block; // иначе между картинкой и текстовым блоком возникает зазор
   }
@@ -164,8 +187,9 @@
 
   .photo-card__info--main {
     display: block;
-    width: 566px;
     padding: 30px 27px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .photo-gallery {
