@@ -86,27 +86,27 @@
 }
 
 /* стили инпутам, чтобы слайды переключались при нажатии */
-#review-1:checked ~ .reviews__list .reviews__item:nth-child(1) {
+.review__btn-1:checked ~ .reviews__list .reviews__item:nth-child(1) {
   display: block;
 }
 
-#review-2:checked ~ .reviews__list .reviews__item:nth-child(2) {
+.review__btn-2:checked ~ .reviews__list .reviews__item:nth-child(2) {
   display: block;
 }
 
-#review-3:checked ~ .reviews__list .reviews__item:nth-child(3) {
+.review__btn-3:checked ~ .reviews__list .reviews__item:nth-child(3) {
   display: block;
 }
 
-#review-1:checked ~ .slider__toggles .slider__toggle--1,
-#review-2:checked ~ .slider__toggles .slider__toggle--2,
-#review-3:checked ~ .slider__toggles .slider__toggle--3 {
+.review__btn-1:checked ~ .slider__toggles .slider__toggle--1,
+.review__btn-2:checked ~ .slider__toggles .slider__toggle--2,
+.review__btn-3:checked ~ .slider__toggles .slider__toggle--3 {
   background-color: @main-blue;
 }
 
-#review-1:checked ~ .slider__toggles .slider__toggle--1::after,
-#review-2:checked ~ .slider__toggles .slider__toggle--2::after,
-#review-3:checked ~ .slider__toggles .slider__toggle--3::after {
+.review__btn-1:checked ~ .slider__toggles .slider__toggle--1::after,
+.review__btn-2:checked ~ .slider__toggles .slider__toggle--2::after,
+.review__btn-3:checked ~ .slider__toggles .slider__toggle--3::after {
   content: "";
   position: absolute;
   top: 3px;
